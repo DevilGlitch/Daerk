@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  color: #ffffff;
   overflow: hidden;
 }
 
@@ -31,6 +32,7 @@ body {
 h1 {
   font-size: 30px;
   text-align: center;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
@@ -42,6 +44,8 @@ label {
 
 input[type="text"],
 input[type="password"] {
+  color: #ffffff;
+  background: #1a1919;
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -52,7 +56,7 @@ input[type="password"] {
 
 input[type="submit"] {
   background-color: #7b0000;
-  color: #ffffff;
+  color: #2e2e2e;
   font-size: 20px;
   padding: 10px 20px;
   border-radius: 5px;
