@@ -5,20 +5,17 @@
     <link rel="stylesheet" type="text/css" href="visualAssets/css/daerk.css">
   </head>
   <body>
-    <div class="background"></div>
-    <div class="container">
-      <div class="login-container">
-        <h1>Login</h1>
-        <form>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username"><br><br>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password"><br><br>
-          <input type="submit" value="Login" id="login-button">
-        </form>
-      </div>
-      <div id="message"></div>
-    </div>
-    <script src="/js/login.js"></script>
+	  <h2>Login Page</h2>
+	  <form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+  <button type="submit">Login</button>
+</form>
+
+    <script src="js/daerkLogin.js"></script>
   </body>
 </html>
