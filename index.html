@@ -1,43 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+	<title>Login Page</title>
 </head>
 <body>
-  <header>
-    <h1>Dashboard</h1>
-    <button id="logout-btn">Logout</button>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#" class="tab-link active" data-tab="id-search">ID Search</a></li>
-      <li><a href="#" class="tab-link" data-tab="new-daerk-file">New Daerk File</a></li>
-      <li><a href="#" class="tab-link" data-tab="edit-daerk-info">Edit Daerk Info</a></li>
-      <li><a href="#" class="tab-link" data-tab="upload-daerk-files">Upload Daerk Files</a></li>
-    </ul>
-  </nav>
-  <main>
-    <section id="id-search" class="tab-section active">
-      <h2>ID Search</h2>
-      <p>Search for an ID...</p>
-    </section>
-    <section id="new-daerk-file" class="tab-section">
-      <h2>New Daerk File</h2>
-      <p>Create a new Daerk file...</p>
-    </section>
-    <section id="edit-daerk-info" class="tab-section">
-      <h2>Edit Daerk Info</h2>
-      <p>Edit Daerk info...</p>
-    </section>
-    <section id="upload-daerk-files" class="tab-section">
-      <h2>Upload Daerk Files</h2>
-      <p>Upload Daerk files...</p>
-    </section>
-  </main>
-  <script src="script.js"></script>
+	<h2>Login Page</h2>
+	<form action="" method="post">
+		<label for="username"><b>Username:</b></label>
+		<input type="text" placeholder="Enter Username" name="username" required>
+		<br>
+		<label for="password"><b>Password:</b></label>
+		<input type="password" placeholder="Enter Password" name="password" required>
+		<br>
+		<button type="submit">Login</button>
+	</form>
 </body>
 </html>
