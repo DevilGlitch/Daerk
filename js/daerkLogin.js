@@ -38,3 +38,47 @@ tabs.forEach((tab) => {
     e.target.classList.add("active");
   });
 });
+
+const loginForm = document.getElementById('login');
+const userField = document.getElementById('user');
+const passField = document.getElementById('pass');
+
+// Replace these with your actual username and password
+const validUser = 'username';
+const validPass = 'password';
+
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const enteredUser = userField.value;
+  const enteredPass = passField.value;
+  
+  if (enteredUser === validUser && enteredPass === validPass) {
+    // Redirect to dashboard page or modify page elements
+    window.location.href = "dashboard.html";
+  } else {
+    alert('Invalid username or password. Please try again.');
+  }
+});
+const loginForm = document.getElementById('login');
+const userField = document.getElementById('user');
+const passField = document.getElementById('pass');
+
+// Replace these with your actual username and password
+const validUser = 'username';
+const validPass = 'password';
+
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const enteredUser = userField.value;
+  const enteredPass = passField.value;
+  
+  if (enteredUser === validUser && enteredPass === validPass) {
+    // Redirect to dashboard page or modify page elements
+    window.location.href = "dashboard.html";
+  } else {
+    alert('Invalid username or password. Please try again.');
+  }
+});
+
