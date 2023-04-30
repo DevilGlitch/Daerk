@@ -1,22 +1,41 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Power Console Client Login</title>
+			<link rel="stylesheet" href="/visualAssets/css/daerkLogin.css">
+			<link rel="icon" type="image/x-icon" href="">
+			<meta charset="UTF-8">
+			<meta name="description" content="">
+			<meta name="keywords" content="">
+			<meta name="author" content="A Crushed Butterfly">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <html>
-  <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" href="/visualAssets/css/daerkLogin.css">
-  </head>
+<div class="login-box">
 
-  <body>
-    <h2>Login Page</h2>
+  <script src="js/login.js"></script>
+  <h2>Login</h2>
+  <form id="login">
+    <div class="user-box">
+      <input type="text" name="user" required=true id="user">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="pass" required=true id "pass">
+      <label>Password</label>
+    </div>
+    <a href="javascript(0);" onclick="/js/daerkLogin.js">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Login
+    </a>
+  </form>
+  <script src="script.js"></script>
+</div>
 
-    <form>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required />
-      <br />
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required />
-      <br />
-      <button type="submit">Login</button>
-    </form>
-    <script src="/js/daerkLogin.js"></script>
-  </body>
+</body?
 </html>
