@@ -1,39 +1,40 @@
-const validUsername = "john"; // change this to your valid username
-const validPassword = "doe"; // change this to your valid password
+// DOM elements
+const loginForm = document.querySelector("#login-form");
+const loginButton = document.querySelector("#login-form button");
+const loginErrorMsg = document.querySelector("#login-error-msg");
+const dashboard = document.querySelector("#dashboard");
+const idSearchTab = document.querySelector("#id-search-tab");
+const newDarkFileTab = document.querySelector("#new-dark-file-tab");
+const editDarkInfoTab = document.querySelector("#edit-dark-info-tab");
+const uploadDarkFilesTab = document.querySelector("#upload-dark-files-tab");
+const tabs = document.querySelectorAll(".tab");
 
-const form = document.querySelector('form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  
-  const username = document.querySelector('#username').value;
-  const password = document.querySelector('#password').value;
-  
-  if(username === validUsername && password === validPassword) {
-    // show dashboard
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.style.display = "block");
-    
-    // hide login form
-    form.style.display = "none";
+// Event listener for login button click
+loginButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  if (username === "username" && password === "password") {
+    // Show dashboard and hide login form
+    loginForm.style.display = "none";
+    dashboard.style.display = "block";
+    // Set ID Search tab as active by default
+    idSearchTab.classList.add("active");
   } else {
-    // show error message
-    alert('Invalid username or password. Please try again.');
+    // Show login error message
+    loginErrorMsg.style.opacity = 1;
   }
 });
 
-// code to handle tab navigation
-const tabButtons = document.querySelectorAll('.tab-button');
-tabButtons.forEach(tabButton => {
-  tabButton.addEventListener('click', (event) => {
-    const tabName = event.target.dataset.tab;
-    const tabs = document.querySelectorAll('.tab');
-    
-    tabs.forEach(tab => {
-      if(tab.id === tabName) {
-        tab.style.display = "block";
-      } else {
-        tab.style.display = "none";
-      }
+// Event listener for tab click
+tabs.forEach((tab) => {
+  tab.addEventListener("click", (e) => {
+    // Remove active class from all tabs
+    tabs.forEach((tab) => {
+      tab.classList.remove("active");
     });
+    // Add active class to clicked tab
+    e.target.classList.add("active");
   });
 });
