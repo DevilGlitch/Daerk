@@ -59,7 +59,7 @@
     </main>
   </div>
   <!--<script src="js/daerkLogin.js"></script>-->
-  <script>
+<script>
 // Get the login form and dashboard section
 const loginForm = document.querySelector('#login');
 const dashboardSection = document.querySelector('#dashboard');
@@ -88,16 +88,21 @@ loginForm.addEventListener('submit', function(event) {
   }
 });
 
-// Add event listener for logout button click
-logoutBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  
+// Function to handle logging out the user
+function logout() {
   // Hide the dashboard section
   dashboardSection.style.display = 'none';
   // Show the login form
   loginForm.style.display = 'block';
-});
+}
 
+// Add event listener for logout button click
+logoutBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  // Call the logout function
+  logout();
+});
 </script>
 
 </body>
