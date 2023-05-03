@@ -1,3 +1,4 @@
+require('dotenv').config();
 const loginForm = document.querySelector('#login');
 const username = process.env.LOGIN_USERNAME;
 const password = process.env.LOGIN_PASSWORD;
