@@ -13,18 +13,34 @@
 <body>
   <div class="login-box">
     <h2>Login</h2>
-    <form id="login">
+    <form id="login-form">
       <div class="user-box">
-        <input type="text" name="user" required=true id="user">
+        <input type="text" name="user" required id="username">
         <label>Username</label>
       </div>
       <div class="user-box">
-        <input type="password" name="pass" required=true id="pass">
+        <input type="password" name="pass" required id="password">
         <label>Password</label>
       </div>
-      <button type="button" onclick="login()">Login</button>
+      <button type="submit">Login</button>
     </form>
   </div>
-  <script src="js/daerkLogin.js"></script>
+  <script>
+    const loginForm = document.querySelector('#login-form');
+    const username = "DaerkOne";
+    const password = "ihopemycookiesaresafe~";
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const userValue = document.querySelector('#username').value;
+        const passValue = document.querySelector('#password').value;
+
+        if (userValue === username && passValue === password) {
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Incorrect username or password. Please try again.");
+        }
+    });
+  </script>
 </body>
 </html>
