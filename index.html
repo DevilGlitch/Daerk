@@ -60,9 +60,10 @@
   </div>
   <!--<script src="js/daerkLogin.js"></script>-->
   <script>
-  // Get the login form and dashboard section
+// Get the login form and dashboard section
 const loginForm = document.querySelector('#login');
 const dashboardSection = document.querySelector('#dashboard');
+const logoutBtn = document.querySelector('#logout-btn');
 
 // Set the username and password
 const username = 'DaerkOne';
@@ -87,6 +88,17 @@ loginForm.addEventListener('submit', function(event) {
   }
 });
 
-  </script>
+// Add event listener for logout button click
+logoutBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  // Hide the dashboard section
+  dashboardSection.style.display = 'none';
+  // Show the login form
+  loginForm.style.display = 'block';
+});
+
+</script>
+
 </body>
 </html>
