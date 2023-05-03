@@ -1,39 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Daerk Login</title>
-			<link rel="stylesheet" href="visualAssets/css/daerkLogin.css">
-			<link rel="icon" type="image/x-icon" href="">
-			<meta charset="UTF-8">
-			<meta name="description" content="">
-			<meta name="keywords" content="">
-			<meta name="author" content="A Crushed Butterfly">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="visualAssets/css/daerkLogin.css">
+  <link rel="icon" type="image/x-icon" href="">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="A Crushed Butterfly">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<html>
-<div class="login-box">
-
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="login">
+      <div class="user-box">
+        <input type="text" name="user" required=true id="user">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="pass" required=true id="pass">
+        <label>Password</label>
+      </div>
+      <button type="button" onclick="login()">Login</button>
+    </form>
+  </div>
   <script src="js/daerkLogin.js"></script>
-  <h2>Login</h2>
-  <form id="login">
-    <div class="user-box">
-      <input type="text" name="user" required=true id="user">
-      <label>Username</label>
-    </div>
-    <div class="user-box">
-	<input type="password" name="pass" required=true id="pass">
-      <label>Password</label>
-    </div>
-    <a>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Login
-    </a>
-  </form>
-</div>
-</body?
+</body>
 </html>
