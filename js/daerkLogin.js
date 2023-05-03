@@ -1,7 +1,6 @@
-require('dotenv').config();
 const loginForm = document.querySelector('#login');
-const username = process.env.LOGIN_USERNAME;
-const password = process.env.LOGIN_PASSWORD;
+const username = "DaerkOne";
+const password = "ihopemycookiesaresafe~";
 
 loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
