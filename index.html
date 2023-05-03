@@ -58,6 +58,35 @@
       </section>
     </main>
   </div>
-  <script src="js/daerkLogin.js"></script>
+  <!--<script src="js/daerkLogin.js"></script>-->
+  <script>
+  // Get the login form and dashboard section
+const loginForm = document.querySelector('#login');
+const dashboardSection = document.querySelector('#dashboard');
+
+// Set the username and password
+const username = 'DaerkOne';
+const password = 'ihopemycookiesaresafe~';
+
+// Add event listener for login form submission
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Get the username and password input values
+  const userValue = document.querySelector('#user').value;
+  const passValue = document.querySelector('#pass').value;
+  
+  // Check if the username and password are correct
+  if (userValue === username && passValue === password) {
+    // Show the dashboard section
+    dashboardSection.style.display = 'block';
+    // Hide the login form
+    loginForm.style.display = 'none';
+  } else {
+    alert('Incorrect username or password. Please try again.');
+  }
+});
+
+  </script>
 </body>
 </html>
