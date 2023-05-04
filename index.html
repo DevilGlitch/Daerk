@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Daerk Login</title>
   <link rel="stylesheet" href="visualAssets/css/daerkLogin.css">
-  <link rel="stylesheet" href="visualAssets/css/daerk.css">
   <link rel="icon" type="image/x-icon" href="">
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -12,98 +11,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div id="login-box" class="login-box">
+  <div class="login-box">
     <h2>Login</h2>
-    <form id="login">
+    <form id="login-form">
       <div class="user-box">
-        <input type="text" name="user" required=true id="user">
+        <input type="text" name="user" required id="username">
         <label>Username</label>
       </div>
       <div class="user-box">
-        <input type="password" name="pass" required=true id="pass">
+        <input type="password" name="pass" required id="password">
         <label>Password</label>
       </div>
-      <button type="button" onclick="login()">Login</button>
+      <button type="submit">Login</button>
     </form>
   </div>
-  <div id="dashboard" class="dashboard-box" style="display:none">
-    <header>
-      <h1>Dashboard</h1>
-      <button id="logout-btn">Logout</button>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#" class="tab-link active" data-tab="id-search">ID Search</a></li>
-        <li><a href="#" class="tab-link" data-tab="new-daerk-file">New Daerk File</a></li>
-        <li><a href="#" class="tab-link" data-tab="edit-daerk-info">Edit Daerk Info</a></li>
-        <li><a href="#" class="tab-link" data-tab="upload-daerk-files">Upload Daerk Files</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="id-search" class="tab-section active">
-        <h2>ID Search</h2>
-        <p>Search for an ID...</p>
-      </section>
-      <section id="new-daerk-file" class="tab-section">
-        <h2>New Daerk File</h2>
-        <p>Create a new Daerk file...</p>
-      </section>
-      <section id="edit-daerk-info" class="tab-section">
-        <h2>Edit Daerk Info</h2>
-        <p>Edit Daerk info...</p>
-      </section>
-      <section id="upload-daerk-files" class="tab-section">
-        <h2>Upload Daerk Files</h2>
-        <p>Upload Daerk files...</p>
-      </section>
-    </main>
-  </div>
-  <!--<script src="js/daerkLogin.js"></script>-->
-<script>
-// Get the login form and dashboard section
-const loginForm = document.querySelector('#login');
-const dashboardSection = document.querySelector('#dashboard');
-const logoutBtn = document.querySelector('#logout-btn');
+  <script>
+    const loginForm = document.querySelector('#login-form');
+    const username = "DaerkOne";
+    const password = "ihopemycookiesaresafe~";
 
-// Set the username and password
-const username = 'DaerkOne';
-const password = 'ihopemycookiesaresafe~';
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const userValue = document.querySelector('#username').value;
+        const passValue = document.querySelector('#password').value;
 
-// Add event listener for login form submission
-loginForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  // Get the username and password input values
-  const userValue = document.querySelector('#user').value;
-  const passValue = document.querySelector('#pass').value;
-  
-  // Check if the username and password are correct
-  if (userValue === username && passValue === password) {
-    // Show the dashboard section
-    dashboardSection.style.display = 'block';
-    // Hide the login form
-    loginForm.style.display = 'none';
-  } else {
-    alert('Incorrect username or password. Please try again.');
-  }
-});
-
-// Function to handle logging out the user
-function logout() {
-  // Hide the dashboard section
-  dashboardSection.style.display = 'none';
-  // Show the login form
-  loginForm.style.display = 'block';
-}
-
-// Add event listener for logout button click
-logoutBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  
-  // Call the logout function
-  logout();
-});
-</script>
-
+        if (userValue === username && passValue === password) {
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Incorrect username or password. Please try again.");
+        }
+    });
+  </script>
 </body>
 </html>
