@@ -17,5 +17,8 @@ function createDrkFile() {
   const anchor = document.createElement('a');
   anchor.href = URL.createObjectURL(blob);
   anchor.download = 'file.drk';
+  anchor.style.display = 'none';
+  document.body.appendChild(anchor);
   anchor.click();
+  document.body.removeChild(anchor);
 }
