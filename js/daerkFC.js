@@ -1,10 +1,4 @@
 // daerkFC.js
-
-document.addEventListener('DOMContentLoaded', function() {
-  const createButton = document.getElementById('create-file-btn');
-  createButton.addEventListener('click', createDrkFile);
-});
-
 function createDrkFile() {
   const username = prompt('Enter username:');
   const password = prompt('Enter password:');
