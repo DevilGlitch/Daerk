@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="visualAssets/css/daerk.css">
+	<style>
+		/* Style for popup overlay */
+		#file-upload-popup-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(#b91a37, #000000);
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Style for popup content */
+		#file-upload-popup-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 400px;
+			padding: 40px;
+			transform: translate(-50%, -50%);
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			box-sizing: border-box;
+			box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+			border-radius: 10px;
+		}
+	</style>
+</head>
+
+<body onload="myFunction()">
+	<!-- Button to trigger file upload popup -->
+	<!-- File upload popup -->
+	<div id="file-upload-popup-overlay" style="display:none">
+		<div id="file-upload-popup-content">
+			<h2>Upload File or Create File</h2>
+			<form>
+				<label for="file-upload">Choose a file:<br></label>
+				<input type="file" id="file-upload" name="file-upload">
+				<br>
+				<br>
+				<br>
+				<input type="submit" value="Upload">
+			</form>
+			<br>
+			<button id="create-file-btn" type="button" onclick="createDrkFile()">Create new file</button>
+		</div>
+	</div>
+	<header>
+		<h1>Dashboard</h1>
+		<button id="logout-btn">Logout</button>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#" class="tab-link active" data-tab="id-search">ID Search</a></li>
+			<li><a href="#" class="tab-link" data-tab="new-daerk-file">New Daerk File</a></li>
+			<li><a href="#" class="tab-link" data-tab="edit-daerk-info">Edit Daerk Info</a></li>
+			<li><a href="#" class="tab-link" data-tab="upload-daerk-files">Upload Daerk Files</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="id-search" class="tab-section active">
+			<h2>ID Search</h2>
+			<p>Search for an ID...</p>
+		</section>
+		<section id="new-daerk-file" class="tab-section">
+			<h2>New Daerk File</h2>
+			<p>Create a new Daerk file...</p>
+		</section>
+		<section id="edit-daerk-info" class="tab-section">
+			<h2>Edit Daerk Info</h2>
+			<p>Edit Daerk info...</p>
+		</section>
+		<section id="upload-daerk-files" class="tab-section">
+			<h2>Upload Daerk Files</h2>
+			<p>Upload Daerk files...</p>
+		</section>
+	</main>
+	<script>
+		function myFunction() {
+			document.getElementById('file-upload-popup-overlay').style.display = 'flex';
+		}
+	</script>
+	<script src="js/daerkFU.js"></script>
+	<script src="js/daerkFC.js"></script>
+	<script src="js/bsfED.js"></script>
+</body>
+
+</html>

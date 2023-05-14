@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Daerk Login</title>
-  <link rel="stylesheet" href="visualAssets/css/daerkLogin.css">
-  <link rel="icon" type="image/x-icon" href="">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="A Crushed Butterfly">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Daerk Secure DB</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Daerk Database is a secure database mainly for Discord User tracking.">
+	<meta name="keywords" content="">
+	<meta name="author" content="ACrushedButterfly.drk">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="Daerk Secure DB" property="og:title" />
+	<meta content="Daerk Database is a secure database mainly for Discord User tracking." property="og:description" />
+	<meta content="https://daerk.devilglitch.repl.co/" property="og:url" />
+	<meta content="/visualAssets/DaerkLogo.jpg" property="og:image" />
+	<meta content="#da004e" data-react-helmet="true" name="theme-color" />
+	<link rel="icon" type="image/x-icon" href="/visualAssets/DaerkFavi.png">
+	
+	<link rel="stylesheet" type="text/css" href="/visualAssets/css/istyle.css">
 </head>
+
 <body>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form id="login-form">
-      <div class="user-box">
-        <input type="text" name="user" required id="username">
-        <label>Username</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="pass" required id="password">
-        <label>Password</label>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-  <script>
-    const loginForm = document.querySelector('#login-form');
-    const username = "DaerkOne";
-    const password = "ihopemycookiesaresafe~";
-
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const userValue = document.querySelector('#username').value;
-        const passValue = document.querySelector('#password').value;
-
-        if (userValue === username && passValue === password) {
-            window.location.href = "dashboard.html";
-        } else {
-            alert("Incorrect username or password. Please try again.");
-        }
-    });
-  </script>
+	<div id="itsframe">
+		<a href="daerklogin.html">
+			<button>Start Now</button>
+		</a>
+		<iframe></iframe>
+	</div>
+	<script src="js/iscript.js"></script>
 </body>
-</html>

@@ -9,7 +9,8 @@ function handleFileUpload(event) {
   reader.onload = function() {
     // get the contents of the file
     const fileContents = reader.result;
-
+	  
+	fileContents = decodeURIComponent(escape(atob(fileContents)));
     // parse the file contents and extract snippets of code
     const codeSnippets = parseCodeSnippets(fileContents);
 
